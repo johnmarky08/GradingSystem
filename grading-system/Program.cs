@@ -66,7 +66,7 @@ namespace grading_system
             Console.Write("Your Option: ");
             switch (Console.ReadLine() ?? "")
             {
-                // For case 1 - Calculate Grade
+                // For Case 1 - Calculate Grade
                 case "1":
                     {
                         Console.Write("\nInput grade: ");
@@ -76,7 +76,7 @@ namespace grading_system
 
                         if (grade >= 50 && grade <= 100)
                         {
-                            // Caclulating grade
+                            // Calculating Grade
                             if (grade >= 99 && grade <= 100)
                             {
                                 gradePoint = 1.00m;
@@ -133,7 +133,7 @@ namespace grading_system
                                 gradeDesc = "Failed";
                             }
 
-                            // Output grade
+                            // Output Grade
                             Console.WriteLine($"\n{name}, a student from {program} under the {college}, enrolled in {course}, received a grade of {grade}. The corresponding grade point is {gradePoint}, which is described as {gradeDesc}.");
                         }
                         else
@@ -143,7 +143,7 @@ namespace grading_system
                         }
                         break;
                     }
-                //For case 2 - Display Grade Scale
+                // For Case 2 - Display Grade Scale
                 case "2":
                     {
                         Console.WriteLine("\n-------------------------------------------------------\n" +
@@ -163,12 +163,12 @@ namespace grading_system
                                             "-------------------------------------------------------\n");
                         break;
                     }
-                //For case 3 - Exit
+                // For Case 3 - Exit
                 case "3":
                     {
                         break;
                     }
-                //Default, executes when input is not in a selection
+                // Default, executes when input is not in a selection
                 default:
                     {
                         Console.WriteLine("\nInvalid selection. Please choose a valid option from the menu (1, 2, or 3). Exiting the program. Goodbye!");
