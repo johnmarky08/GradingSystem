@@ -13,7 +13,7 @@ namespace grading_system
             string course = "";
             string college = "";
 
-            //Welcome message
+            // Welcome Message
             Console.WriteLine("------------------");
             Console.WriteLine("| GRADING SYSTEM |");
             Console.WriteLine("------------------\n");
@@ -21,7 +21,7 @@ namespace grading_system
                               "              BS ComSci 1-A\n" +
                               "              October 14, 2024\n\n");
 
-            //Ask for user's  information
+            // Ask for user's  information
             while (!hasName)
             {
                 if (name.Length == 0)
@@ -59,14 +59,14 @@ namespace grading_system
                 else hasCollege = true;
             }
 
-            //Choose an option
+            // Choose an option
             Console.WriteLine("\nChoose An Option:\n\t[ 1 ] - Input a numerical grade (50-100) and output the corresponding grade point and description.\n\t[ 2 ] - Display the full grading scale.\n\t[ 3 ] - Exit the program");
 
-            //Switch between selections
+            // Switch between selections
             Console.Write("Your Option: ");
             switch (Console.ReadLine() ?? "")
             {
-                //For case 1
+                // For case 1 - Calculate grade
                 case "1":
                     {
                         Console.Write("\nInput grade: ");
@@ -119,31 +119,73 @@ namespace grading_system
                             }
                             else if (grade >= 75 && grade <= 77)
                             {
-                                gradePoint = 3.00m;
-                                gradeDesc = "Passed";
-                            }
-                            else if (grade >= 70 && grade <= 74)
-                            {
-                                gradePoint = 4.00m;
-                                gradeDesc = "Conditional Failure";
-                            }
-                            else if (grade <= 69)
-                            {
-                                gradePoint = 5.00m;
-                                gradeDesc = "Failed";
-                            }
+                                case >= 99 && <= 100:
+                                {
+                                    gradePoint = 1.00m;
+                                    gradeDesc = "Excellent";
+                                }
+                                case >= 96 && <= 98:
+                                {
+                                    gradePoint = 1.25m;
+                                    gradeDesc = "Excellent";
+                                }
+                                case >= 93 && <= 95:
+                                {
+                                    gradePoint = 1.50m;
+                                    gradeDesc = "Very Satisfactory";
+                                }
+                                case >= 90 && <= 92;
+                                {
+                                    gradePoint = 1.75m;
+                                    gradeDesc = "Very Satisfactory";
+                                }
+                                case >= 87 && <= 89:
+                                {
+                                    gradePoint = 2.00m;
+                                    gradeDesc = "Satisfactory";
+                                }
+                                case >= 84 && <= 86:
+                                {
+                                    gradePoint = 2.25m;
+                                    gradeDesc = "Satisfactory";
+                                }
+                                case >= 81 && <= 83:
+                                {
+                                    gradePoint = 2.50m;
+                                    gradeDesc = "Fairly Satisfactory";
+                                }
+                                case >= 78 && <= 80:
+                                {
+                                    gradePoint = 2.75m;
+                                    gradeDesc = "Fairly Satisfactory";
+                                }
+                                case >= 75 && <= 77:
+                                {
+                                    gradePoint = 3.00m;
+                                    gradeDesc = "Passed";
+                                }
+                                case >= 70 && <= 74:
+                                {
+                                    gradePoint = 4.00m;
+                                    gradeDesc = "Conditional Failure";
+                                }
+                                case <= 69:
+                                {
+                                    gradePoint = 5.00m;
+                                    gradeDesc = "Failed";
+                                }
 
-                            //Output grade
-                            Console.WriteLine($"\n{name}, a student from {program} under the {college}, enrolled in {course}, received a grade of {grade}. The corresponding grade point is {gradePoint}, which is described as {gradeDesc}.");
+                                // Output grade
+                                Console.WriteLine($"\n{name}, a student from {program} under the {college}, enrolled in {course}, received a grade of {grade}. The corresponding grade point is {gradePoint}, which is described as {gradeDesc}.");
                         }
                         else
                         {
-                            //End program if invalid grade
+                            // End program if invalid grade
                             Console.WriteLine("\nInvalid input. Numerical grade must be between 50 and 100.\nExiting the program. Goodbye!");
                         }
                         break;
                     }
-                //For case 2
+                // For case 2 - Display Grading Dcale
                 case "2":
                     {
                         Console.WriteLine("\n-------------------------------------------------------\n" +
@@ -163,12 +205,12 @@ namespace grading_system
                                             "-------------------------------------------------------\n");
                         break;
                     }
-                //For case 3
+                // For case 3 - Exit
                 case "3":
                     {
                         break;
                     }
-                //Default, executes when input is not in a selection
+                // Default, executes when input is not in a selection
                 default:
                     {
                         Console.WriteLine("\nInvalid selection. Please choose a valid option from the menu (1, 2, or 3). Exiting the program. Goodbye!");
