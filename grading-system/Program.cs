@@ -141,7 +141,7 @@ namespace grading_system
                             // End program if invalid grade
                             Console.WriteLine("\nInvalid input. Numerical grade must be between 50 and 100.\nExiting the program. Goodbye!");
                         }
-                        break;
+                        return;
                     }
                 // For Case 2 - Display Grade Scale
                 case "2":
@@ -161,18 +161,19 @@ namespace grading_system
                                             "|      70-74      |    4.00     | Conditional Failure |\n" +
                                             "|     69 below    |    5.00     |        Failed       |\n" +
                                             "-------------------------------------------------------\n");
-                        break;
+                        return;
                     }
                 // For Case 3 - Exit
                 case "3":
                     {
-                        break;
+                        Console.WriteLine("Exiting Program...");
+                        return;
                     }
                 // Default, executes when input is not in a selection
                 default:
                     {
                         Console.WriteLine("\nInvalid selection. Please choose a valid option from the menu (1, 2, or 3). Exiting the program. Goodbye!");
-                        break;
+                        return;
                     }
             }
         }
